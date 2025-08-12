@@ -2,6 +2,9 @@ import { useCallback, useEffect } from "react";
 
 const tg = window.Telegram.WebApp;
 export const HomeScreen = () => {
+  const onCLose = useCallback(() => {
+    tg.close();
+  }, []);
   useEffect(() => {
     // Ініціалізація Telegram Web App
     tg.ready();
@@ -11,8 +14,6 @@ export const HomeScreen = () => {
       onCLose();
     });
   }, [onCLose]);
-  const onCLose = useCallback(() => {
-    tg.close();
-  }, []);
+
   return <div>HomeScreen</div>;
 };
