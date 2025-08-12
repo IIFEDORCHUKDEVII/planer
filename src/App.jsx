@@ -1,21 +1,14 @@
 import "./App.css";
 import { useEffect } from "react";
-const tg = window.Telegram.WebApp;
+
+import { Navigation } from "./navigation/Navigation";
+import { BrowserRouter } from "react-router";
+
 function App() {
-  useEffect(() => {
-    // Ініціалізація Telegram Web App
-    tg.ready();
-    tg.MainButton.show();
-    // Наприклад, кнопка для закриття Telegram Web App
-  }, []);
-  const onCLose = () => {
-    tg.close();
-  };
   return (
-    <div>
-      <h1>Welcome 2</h1>
-      <button onClick={onCLose}>Close</button>
-    </div>
+    <BrowserRouter>
+      <Navigation />
+    </BrowserRouter>
   );
 }
 
