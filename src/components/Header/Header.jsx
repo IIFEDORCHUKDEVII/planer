@@ -17,12 +17,10 @@ export const Header = () => {
   return (
     <div className="headerBlock">
       <div className="countPurpose">
-        <h3>Count purpose</h3>
-        <h2>{listPurpose.length}</h2>
+        <h5>Count purpose</h5>
+        <h4>{listPurpose.length}</h4>
       </div>
-      <input type="button" className="button">
-        Add purpose
-      </input>
+      <button className="button">Add purpose</button>
     </div>
   );
 };
