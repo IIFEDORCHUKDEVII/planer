@@ -8,9 +8,9 @@ export const HomeScreen = () => {
     tg.MainButton.show();
     // Наприклад, кнопка для закриття Telegram Web App
     tg.onEvent("mainButtonClicked", () => {
-      onCLose()
+      onCLose();
     });
-  }, []);
+  }, [onCLose]);
   const onCLose = useCallback(() => {
     tg.close();
   }, []);
