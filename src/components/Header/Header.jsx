@@ -16,14 +16,13 @@ export const listPurpose = [
 export const Header = () => {
   return (
     <div className="headerBlock">
-      <h3>Counts purpose</h3>
-      <h2>{listPurpose.length}</h2>
-      <div>
-        {listPurpose.map((item) => (
-          <p key={item.id}>{item.name}</p>
-        ))}
+      <div className="countPurpose">
+        <h3>Count purpose</h3>
+        <h2>{listPurpose.length}</h2>
       </div>
-      <button className="button">Add purpose</button>
+      <input type="button" className="button">
+        Add purpose
+      </input>
     </div>
   );
 };
