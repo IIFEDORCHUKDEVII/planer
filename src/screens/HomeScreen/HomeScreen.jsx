@@ -8,6 +8,7 @@ export const HomeScreen = () => {
   useEffect(() => {
     // Ініціалізація Telegram Web App
     tg.ready();
+    tg.MainButton.setText("Close");
     tg.MainButton.show();
     // Наприклад, кнопка для закриття Telegram Web App
     tg.onEvent("mainButtonClicked", () => {
