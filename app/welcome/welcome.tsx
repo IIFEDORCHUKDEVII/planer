@@ -1,25 +1,24 @@
 import { useEffect } from "react";
 import logoDark from "./logo-dark.svg";
 import logoLight from "./logo-light.svg";
-
+const tg = window.Telegram.WebApp;
 export function Welcome() {
   useEffect(() => {
-    if (window.Telegram) {
+    if (tg) {
       // Ініціалізація Telegram Web App
-      window.Telegram.WebApp.ready();
-      window.Telegram.WebApp.expand();
+      tg.ready();
+      tg.expand();
 
       // Наприклад, кнопка для закриття Telegram Web App
-      window.Telegram.WebApp.onEvent("close", () => {
-        window.Telegram.WebApp.close();
-      });
     }
   }, []);
-
+  const onCLose = () => {
+    tg.close();
+  };
   return (
     <div>
-      <h1>Welcome to the Telegram Mini App</h1>
-      <button onClick={() => window.Telegram.WebApp.close()}>Close</button>
+      <h1>Welcome</h1>
+      <button onClick={onCLose}>Close</button>
     </div>
   );
 }
