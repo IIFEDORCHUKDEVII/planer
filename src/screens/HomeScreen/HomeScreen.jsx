@@ -1,20 +1,22 @@
 import { useCallback, useEffect } from "react";
+import { useTelegram } from "../../hooks/useTelegram";
+import { Header } from "../../components/Header/Header";
 
-const tg = window.Telegram.WebApp;
 export const HomeScreen = () => {
-  const onCLose = useCallback(() => {
-    tg.close();
-  }, []);
-  useEffect(() => {
-    // Ініціалізація Telegram Web App
-    tg.ready();
-    tg.MainButton.setText("Close");
-    tg.MainButton.show();
-    // Наприклад, кнопка для закриття Telegram Web App
-    tg.onEvent("mainButtonClicked", () => {
-      onCLose();
-    });
-  }, [onCLose]);
+  const { tg } = useTelegram();
 
-  return <div>HomeScreen</div>;
+  useEffect(() => {
+    tg.ready();
+    // tg.MainButton.setText("Close");
+    // tg.MainButton.show();
+    // tg.onEvent("mainButtonClicked", () => {
+    //   onCLose();
+    // });
+  }, []);
+
+  return (
+    <div>
+      <Header />
+    </div>
+  );
 };
