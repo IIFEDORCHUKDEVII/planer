@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useCallback, useEffect } from "react";
 
 const tg = window.Telegram.WebApp;
 export const HomeScreen = () => {
@@ -8,11 +8,11 @@ export const HomeScreen = () => {
     tg.MainButton.show();
     // Наприклад, кнопка для закриття Telegram Web App
     tg.onEvent("mainButtonClicked", () => {
-      tg.close();
+      onCLose()
     });
   }, []);
-  const onCLose = () => {
+  const onCLose = useCallback(() => {
     tg.close();
-  };
+  }, []);
   return <div>HomeScreen</div>;
 };
