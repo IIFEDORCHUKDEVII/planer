@@ -15,7 +15,7 @@ div .headerBlock {
   align-items: center;
   padding: 12px;
   border-radius: 8px;
-  background: var(--tg-theme-secondary-bg-color);
+  background: var(--tg-theme-section-bg-color);
 }
 
 div .button {
@@ -24,5 +24,5 @@ div .button {
   border-color: var(--tg-theme-button-text-color);
   border-radius: 6px;
   background: var(--tg-theme-button-color);
-  color: var(--tg-theme-button-text-color);
+  color: var(--tg-theme-accent-text-color);
 }
