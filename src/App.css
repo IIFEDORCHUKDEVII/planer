@@ -5,11 +5,16 @@
 }
 
 body {
+  padding: 16px;
   background: var(--tg-theme-bg-color);
   color: var(--tg-theme-text-color);
 }
 
 div .headerBlock {
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  border-radius: 8px;
   background: var(--tg-theme-header-bg-color);
 }
 
