@@ -22,7 +22,7 @@ div .countPurpose {
   justify-content: center;
   padding: 6px;
 }
-div .button {
+button .button {
   padding: 12px;
   width: 100%;
   border-color: var(--tg-theme-button-text-color);
