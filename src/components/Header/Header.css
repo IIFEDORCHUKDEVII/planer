@@ -1,0 +1,22 @@
+.headerBlock {
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  border-radius: 8px;
+  background: "red"; /* var(--tg-theme-section-bg-color); */
+}
+.countPurpose {
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+}
+.button {
+  padding: 12px;
+  width: 100%;
+  border-color: "#33333";
+  border-radius: 6px;
+  background: var(--tg-theme-button-color);
+  color: var(--tg-theme-button-color);
+  outline: none; /* Use with caution for accessibility */
+  border: none;
+}

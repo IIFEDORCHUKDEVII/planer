@@ -20,7 +20,19 @@ export const Header = () => {
         <h5>Count purpose</h5>
         <h4>{listPurpose.length}</h4>
       </div>
-      <button className="button">Add purpose</button>
+      <div className="listPurpose">
+        <h5>List purpose</h5>
+        <ul>
+          {listPurpose.map((item) => (
+            <li className="purpose" key={item.id}>
+              {item.name}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <button className="button">Add purpose</button>
+      </div>
     </div>
   );
 };

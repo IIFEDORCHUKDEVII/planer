@@ -10,23 +10,62 @@ body {
   color: var(--tg-theme-text-color);
 }
 
-div .headerBlock {
-  justify-content: center;
+.headerBlock {
+  display: flex; /* додаємо flex-контейнер */
+  gap: 6px;
+  justify-content: space-between;
   align-items: center;
   padding: 12px;
-  border-radius: 8px;
-  background: var(--tg-theme-section-bg-color);
+  flex-direction: column;
+
+  border-radius: 18px;
+  background-color: var(--tg-theme-section-bg-color);
 }
-div .countPurpose {
+.countPurpose {
+  width: 30%;
+  border-radius: 12px;
+  background-color: var(--tg-theme-button-text-color);
+  background: var(--tg-theme-button-text-color);
+  display: flex; /* додаємо flex-контейнер */
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 6px;
 }
-button {
+.purpose {
+  display: flex;
+  flex: 1; /* Ensures it takes available space */
+  background-color: var(--tg-theme-button-text-color);
+  background: var(--tg-theme-button-text-color);
+  margin: 0 10px 0 0;
+  border-radius: 12px;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+.listPurpose ul {
+  list-style-type: none; /* Remove default list style */
+  padding: 0;
+  margin: 0;
+}
+
+.listPurpose {
+  width: 100%;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 6px;
+}
+.button {
+  margin-top: 8px;
   padding: 12px;
   width: 100%;
   border-color: var(--tg-theme-button-text-color);
-  border-radius: 6px;
-  background: var(--tg-theme-button-color);
+  border-radius: 12px;
+  background-color: grey; /*var(--tg-theme-button-color);*/
   color: var(--tg-theme-button-color);
+  border: none;
+  outline: none;
 }
